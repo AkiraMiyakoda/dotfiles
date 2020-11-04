@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+    . /usr/share/git/completion/git-prompt.sh
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -63,7 +67,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]] $(__git_ps1 "(\[\033[01;93m\]%s\[\033[00m\])")\n\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\h\[\033[00m\] \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n\[\033[01;32m\]\u\[\033[92m\]@\[\033[4m\]\h\[\033[00m\] \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
