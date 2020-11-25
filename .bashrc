@@ -17,7 +17,6 @@ case $TERM in
     linux) LANG=C ;;
     *)     LANG=ja_JP.UTF-8;;
 esac
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -66,8 +65,26 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Check if I am in WSL or not.
+
+if [[ "$(< /proc/version)" == *@(Microsoft|WSL)* ]]; then
+    WSL_PROMPT='(WSL1) '
+elif [[ "$(< /proc/version)" == *@(microsoft)* ]]; then
+    WSL_PROMPT='(WSL2) '
+else
+    WSL_PROMPT=''
+fi
+
+# Check if I am on SSH or not.
+
+if [ "$(ps h -o comm -p "$PPID")" == "sshd" ] ; then
+    SSH_PROMPT='(SSH) '
+else
+    SSH_PROMPT=''
+fi
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n \[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n${WSL_PROMPT}${SSH_PROPMT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -125,3 +142,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/akira/google-cloud-sdk/path.bash.inc' ]; then . '/home/akira/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/akira/google-cloud-sdk/completion.bash.inc' ]; then . '/home/akira/google-cloud-sdk/completion.bash.inc'; fi
