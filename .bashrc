@@ -77,14 +77,14 @@ fi
 
 # Check if I am on SSH or not.
 
-if [ "$(ps h -o comm -p "$PPID")" == "sshd" ] ; then
+if [[ "$(ps h -o comm -p "$PPID")" == "sshd" ]]; then
     SSH_PROMPT='(SSH) '
 else
     SSH_PROMPT=''
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n${WSL_PROMPT}${SSH_PROPMT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n${WSL_PROMPT}${SSH_PROMPT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
