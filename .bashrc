@@ -83,8 +83,11 @@ else
     SSH_PROMPT=''
 fi
 
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWDIRTYSTATE=1
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]\n${WSL_PROMPT}${SSH_PROMPT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[00m\]]$(__git_ps1)\n${WSL_PROMPT}${SSH_PROMPT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[00m\] \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
