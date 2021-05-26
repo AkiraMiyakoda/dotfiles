@@ -67,10 +67,10 @@ fi
 
 # Check if I am in WSL or not.
 
-if [[ "$(< /proc/version)" == *@(Microsoft|WSL)* ]]; then
-    WSL_PROMPT='(WSL1) '
-elif [[ "$(< /proc/version)" == *@(microsoft)* ]]; then
+if [[ "$(< /proc/version)" == *@(WSL2)* ]]; then
     WSL_PROMPT='(WSL2) '
+elif [[ "$(< /proc/version)" == *@(WSL)* ]]; then
+    WSL_PROMPT='(WSL1) '
 else
     WSL_PROMPT=''
 fi
