@@ -7,6 +7,12 @@ cd /tmp
 wget "$SARASA_URL"
 7z x "$SARASA_FILE.7z"
 
+if [ $(id -u) -eq 0 ]; then
+    DESTIN_DIR='/usr/share/fonts/truetype/sarasa-gothic/'
+else
+    DESTIN_DIR='~/.fonts'
+fi
+
 mkdir -p ~/.fonts
-mv sarasa-*-j-*.ttf ~/.fonts
+mv sarasa-*-j-*.ttf "$DESTIN_DIR"
 rm -rf sarasa-*
