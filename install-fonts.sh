@@ -13,6 +13,6 @@ else
     DESTIN_DIR='~/.fonts'
 fi
 
-mkdir -p ~/.fonts
+mkdir -p "$DESTIN_DIR"
 mv sarasa-*-j-*.ttf "$DESTIN_DIR"
 rm -rf sarasa-*
