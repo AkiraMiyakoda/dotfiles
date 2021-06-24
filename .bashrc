@@ -12,11 +12,6 @@ case $- in
       *) return;;
 esac
 
-# Switch the locale according to whether or not it is SSH.
-case $TERM in
-    linux) LANG=C ;;
-    *)     LANG=ja_JP.UTF-8;;
-esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
