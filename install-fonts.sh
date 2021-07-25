@@ -19,6 +19,7 @@ DESTIN_DIR='/usr/share/fonts/truetype/sarasa-gothic/'
 
 mkdir -p "${DESTIN_DIR}"
 mv ./sarasa-*-j-*.ttf "${DESTIN_DIR}"
+rm "${SARASA_FILE}"
 rm ./sarasa-*
 
 # Install IBM Plex Sans JP
@@ -34,6 +35,7 @@ DESTIN_DIR='/usr/share/fonts/truetype/plex/'
 
 mkdir -p "$DESTIN_DIR"
 mv ./TrueType/IBM-Plex-Sans-JP/hinted/*.ttf "$DESTIN_DIR"
+rm "${PLEX_FILE}"
 rm -rf ./TrueType
 
 # Refresh font cache
