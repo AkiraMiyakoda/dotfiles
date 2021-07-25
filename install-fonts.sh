@@ -35,3 +35,7 @@ DESTIN_DIR='/usr/share/fonts/truetype/plex/'
 mkdir -p "$DESTIN_DIR"
 mv ./TrueType/IBM-Plex-Sans-JP/hinted/*.ttf "$DESTIN_DIR"
 rm -rf ./TrueType
+
+# Refresh font cache
+
+fc-cache -f -v
