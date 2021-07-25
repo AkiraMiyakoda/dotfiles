@@ -7,7 +7,7 @@ fi
 
 # Install Sarasa Gothic
 
-SARASA_VER='0.32.11'
+SARASA_VER='0.32.14'
 SARASA_FILE="sarasa-gothic-ttf-${SARASA_VER}.7z"
 SARASA_URL="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${SARASA_VER}/${SARASA_FILE}"
 
