@@ -81,11 +81,6 @@ fi
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\n[\[\033[01;34m\]\w\[\033[m\]]\[\033[33m\]$(__git_ps1)\[\033[m\]\n${WSL_PROMPT}${SSH_PROMPT}\[\033[01;32m\]\u\[\033[91m\]@\[\033[4m\]\H\[\033[m\] \$\[\033[m\] '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -146,3 +141,15 @@ if [ -f '/home/akira/google-cloud-sdk/path.bash.inc' ]; then . '/home/akira/goog
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/akira/google-cloud-sdk/completion.bash.inc' ]; then . '/home/akira/google-cloud-sdk/completion.bash.inc'; fi
+
+# Activate Powerline
+PATH=$PATH:~/.local/bin
+
+function _update_ps1() {
+    PS1="$(~/.local/bin/powerline-shell $?)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
