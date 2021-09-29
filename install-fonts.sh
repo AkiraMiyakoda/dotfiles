@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
 if [ $(id -u) -ne 0 ]; then
-    echo "Sudo requred."
+    echo "Sudo required."
     exit 1
 fi
+
+# Install required tool and my favorite font packages
+
+apt install -y p7zip-full fonts-mplus fonts-cascadia-code
 
 # Install Sarasa Gothic
 
