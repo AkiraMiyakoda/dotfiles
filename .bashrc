@@ -153,3 +153,4 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+export GPG_TTY=$(tty)
