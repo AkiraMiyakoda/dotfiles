@@ -60,24 +60,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Check if I am in WSL or not.
-
-if [[ "$(< /proc/version)" == *@(WSL2)* ]]; then
-    WSL_PROMPT='(WSL2) '
-elif [[ "$(< /proc/version)" == *@(WSL)* ]]; then
-    WSL_PROMPT='(WSL1) '
-else
-    WSL_PROMPT=''
-fi
-
-# Check if I am on SSH or not.
-
-if [[ "$(ps h -o comm -p "$PPID")" == "sshd" ]]; then
-    SSH_PROMPT='(SSH) '
-else
-    SSH_PROMPT=''
-fi
-
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
 
