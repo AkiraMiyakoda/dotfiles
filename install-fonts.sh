@@ -28,7 +28,7 @@ rm ./sarasa-*
 
 # Install IBM Plex Sans JP
 
-PLEX_VER="5.2.1"
+PLEX_VER="6.3.0"
 PLEX_FILE="TrueType.zip"
 PLEX_URL="https://github.com/IBM/plex/releases/download/v${PLEX_VER}/${PLEX_FILE}"
 
