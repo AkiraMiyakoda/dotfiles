@@ -11,7 +11,7 @@ apt install -y p7zip-full fonts-mplus fonts-cascadia-code
 
 # Install Sarasa Gothic
 
-SARASA_VER='0.42.5'
+SARASA_VER="0.42.5"
 SARASA_FILE="sarasa-gothic-ttf-${SARASA_VER}.7z"
 SARASA_URL="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${SARASA_VER}/${SARASA_FILE}"
 
@@ -28,19 +28,35 @@ rm ./sarasa-*
 
 # Install IBM Plex Sans JP
 
-PLEX_VER='5.2.1'
-PLEX_FILE='TrueType.zip'
+PLEX_VER="5.2.1"
+PLEX_FILE="TrueType.zip"
 PLEX_URL="https://github.com/IBM/plex/releases/download/v${PLEX_VER}/${PLEX_FILE}"
 
 wget "${PLEX_URL}"
 7z x "${PLEX_FILE}"
 
-DESTIN_DIR='/usr/share/fonts/truetype/plex/'
+DESTIN_DIR="/usr/share/fonts/truetype/plex/"
 
 mkdir -p "$DESTIN_DIR"
 mv ./TrueType/IBM-Plex-Sans-JP/hinted/*.ttf "$DESTIN_DIR"
 rm "${PLEX_FILE}"
 rm -rf ./TrueType
+
+# Install MPlus nerd
+
+NERD_VER="3.0.2"
+MPLUS_NERD_FILE="MPlus.zip"
+MPLUS_NERD_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v${NERD_VER}/${MPLUS_NERD_FILE}"
+
+wget "${MPLUS_NERD_URL}"
+7z x "${MPLUS_NERD_FILE}" -oMPlus
+
+DESTIN_DIR="/usr/share/fonts/truetype/mplus-nerd/"
+
+mkdir -p "$DESTIN_DIR"
+mv ./MPlus/*.ttf "$DESTIN_DIR"
+rm "${MPLUS_NERD_FILE}"
+rm -rf ./MPlus
 
 # Refresh font cache
 
