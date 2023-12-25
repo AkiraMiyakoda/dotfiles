@@ -11,18 +11,18 @@ apt install -y p7zip-full fonts-mplus fonts-cascadia-code
 
 # Install Sarasa Gothic
 
-SARASA_VER="0.42.5"
-SARASA_FILE="sarasa-gothic-ttf-${SARASA_VER}.7z"
+SARASA_VER="1.0.0"
+SARASA_FILE="Sarasa-TTF-${SARASA_VER}.7z"
 SARASA_URL="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${SARASA_VER}/${SARASA_FILE}"
 
 cd /tmp
 wget "${SARASA_URL}"
 7z x "${SARASA_FILE}"
 
-DESTIN_DIR='/usr/share/fonts/truetype/sarasa-gothic/'
+DESTIN_DIR="/usr/share/fonts/truetype/sarasa-gothic/"
 
 mkdir -p "${DESTIN_DIR}"
-mv ./sarasa-*-j-*.ttf "${DESTIN_DIR}"
+mv ./Sarasa*J-*.ttf "${DESTIN_DIR}"
 rm "${SARASA_FILE}"
 rm ./sarasa-*
 
