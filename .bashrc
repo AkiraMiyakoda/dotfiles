@@ -135,7 +135,7 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-if [ -x "$(command -v foo)" ]; then
+if [ -x "$(command -v docker)" ]; then
     export TARGETPLATFORM=$(docker system info --format "{{.OSType}}/{{.Architecture}}")
 fi
 
