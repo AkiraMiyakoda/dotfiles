@@ -129,6 +129,9 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+# Activate Go
+PATH=$PATH:/usr/local/go/bin:~/go/bin
+
 # Define Docker target platform
 if [ -x "$(command -v docker)" ]; then
     export TARGETPLATFORM=$(docker system info --format "{{.OSType}}/{{.Architecture}}")
