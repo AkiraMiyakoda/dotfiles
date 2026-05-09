@@ -118,8 +118,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Activate Powerline
-PATH=$PATH:~/.local/bin
+# Activate Powerline if installed
+if [ -d ~/.local/bin ]; then
+    PATH=$PATH:~/.local/bin
+fi
 
 function _update_ps1() {
     PS1="$(~/.local/bin/powerline-shell $?)"
@@ -129,12 +131,19 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-# Activate Go
-PATH=$PATH:/usr/local/go/bin:~/go/bin
+# Activate Go if installed
+if [ -d /usr/local/go/gin ]; then
+    PATH=$PATH:/usr/local/go/bin
+fi
+
+if [ -d ~/go/gin ]; then
+    PATH=$PATH:~/go/bin
+fi
 
 # Define Docker target platform
 if [ -x "$(command -v docker)" ]; then
     export TARGETPLATFORM=$(docker system info --format "{{.OSType}}/{{.Architecture}}")
 fi
 
+# Enable GPG to input passphrase
 export GPG_TTY=$(tty)
