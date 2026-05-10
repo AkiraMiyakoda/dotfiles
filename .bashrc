@@ -118,16 +118,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Activate Powerline if installed
+# Add path to ~/.local/bin if exists
 if [ -d ~/.local/bin ]; then
     PATH=$PATH:~/.local/bin
 fi
 
+# Activate Powerline if installed
 function _update_ps1() {
     PS1="$(~/.local/bin/powerline-shell $?)"
 }
 
-if [ "$TERM" != "linux" ]; then
+if [ -x "$(command -v powerline-shell)" ] && [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
