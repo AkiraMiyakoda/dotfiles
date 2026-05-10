@@ -132,6 +132,11 @@ if [ -x "$(command -v powerline-shell)" ] && [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+# Activate Cargo if installed
+if [ -d ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
+
 # Activate Go if installed
 if [ -d /usr/local/go/gin ]; then
     PATH=$PATH:/usr/local/go/bin
