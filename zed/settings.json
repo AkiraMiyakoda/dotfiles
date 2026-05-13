@@ -35,6 +35,9 @@
                 },
             },
         },
+        "TOML": {
+            "formatter": { "language_server": { "name": "tombi" } },
+        },
         "YAML": {
             "tab_size": 2,
         },
