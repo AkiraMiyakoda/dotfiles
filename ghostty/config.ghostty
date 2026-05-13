@@ -1,0 +1,20 @@
+theme = "Nord"
+background-opacity = 0.98
+
+font-family = "Cascadia Next JP NF"
+font-style = "SemiBold"
+font-style-bold = "ExtraBold"
+font-size = 12.6
+font-feature = -dlig
+
+window-width = 160
+window-height = 40
+adjust-cell-height = 5%
+
+right-click-action = copy-or-paste
+
+shell-integration = bash
+term = xterm-256color
+env = LANG=ja_JP.UTF-8
+
+
