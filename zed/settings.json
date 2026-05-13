@@ -1,0 +1,160 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "restore_on_startup": "last_workspace",
+    "tab_size": 4,
+    "prettier": {
+        "allowed": true,
+    },
+    "icon_theme": "Catppuccin Macchiato",
+    "text_rendering_mode": "platform_default",
+    "ui_font_family": ".ZedSans",
+    "indent_guides": {
+        "background_coloring": "disabled",
+        "coloring": "fixed",
+    },
+    "scrollbar": {
+        "show": "auto",
+        "selected_text": true,
+        "cursors": true,
+        "git_diff": true,
+    },
+    "cli_default_open_behavior": "existing_window",
+    "languages": {
+        "Rust": {
+            "semantic_tokens": "combined",
+            "formatter": {
+                "language_server": {
+                    "name": "rust-analyzer",
+                },
+            },
+        },
+        "YAML": {
+            "tab_size": 2,
+        },
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "rustfmt": {
+                    "extraArgs": ["+nightly"],
+                },
+            },
+        },
+    },
+    "toolbar": {
+        "breadcrumbs": true,
+    },
+    "buffer_line_height": {
+        "custom": 1.45,
+    },
+    "project_panel": {
+        "bold_folder_labels": true,
+        "file_icons": true,
+        "folder_icons": true,
+        "git_status": true,
+        "git_status_indicator": true,
+        "diagnostic_badges": true,
+        "default_width": 240.0,
+        "dock": "left",
+    },
+    "outline_panel": {
+        "dock": "right",
+    },
+    "collaboration_panel": {
+        "dock": "left",
+    },
+    "agent": {
+        "dock": "right",
+        "favorite_models": [],
+        "model_parameters": [],
+    },
+    "git_panel": {
+        "dock": "left",
+    },
+    "wsl_connections": [
+        {
+            "distro_name": "Ubuntu-26.04",
+            "user": "akira",
+            "projects": [
+                {
+                    "paths": ["/home/akira/code/balbird-v26"],
+                },
+                {
+                    "paths": ["/home/akira/code/bitbank-orderbook"],
+                },
+                {
+                    "paths": ["/home/akira/code/dotfiles"],
+                },
+                {
+                    "paths": ["/home/akira/code/kodzuchi"],
+                },
+                {
+                    "paths": ["/home/akira/code/mahjongsoul-electron"],
+                },
+                {
+                    "paths": ["/home/akira/code/rust-utils"],
+                },
+                {
+                    "paths": ["/home/akira/code/tombi"],
+                },
+                {
+                    "paths": ["/home/akira/code/tombi-test"],
+                },
+                {
+                    "paths": ["/home/akira/code/toml-test"],
+                },
+            ],
+        },
+    ],
+    "buffer_font_weight": 600.0,
+    "buffer_font_family": "Cascadia Next JP NF",
+    "ssh_connections": [
+        {
+            "host": "caesario",
+            "username": "akira",
+            "args": [],
+            "projects": [
+                {
+                    "paths": ["/home/akira/code/wallclock"],
+                },
+            ],
+        },
+    ],
+    "terminal": {
+        "font_weight": 500.0,
+        "font_size": 16.0,
+        "font_family": "Cascadia Next JP NF",
+        "line_height": {
+            "custom": 1.4,
+        },
+    },
+    "telemetry": {
+        "diagnostics": true,
+        "metrics": true,
+    },
+    "minimap": {
+        "max_width_columns": 140,
+        "show": "always",
+    },
+    "file_types": {},
+    "show_whitespaces": "all",
+    "show_edit_predictions": true,
+    "ensure_final_newline_on_save": true,
+    "wrap_guides": [80, 120, 160],
+    "base_keymap": "VSCode",
+    "ui_font_size": 17,
+    "buffer_font_size": 17,
+    "theme": {
+        "mode": "dark",
+        "light": "Ayu Light",
+        "dark": "Catppuccin Macchiato - No Italics",
+    },
+    "disable_ai": true,
+}
