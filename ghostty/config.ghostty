@@ -1,6 +1,10 @@
 theme = "Nord"
 background-opacity = 0.98
 
+working-directory = home
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+
 font-family = "Cascadia Next JP NF"
 font-style = "SemiBold"
 font-style-bold = "ExtraBold"
@@ -16,5 +20,3 @@ right-click-action = copy-or-paste
 shell-integration = bash
 term = xterm-256color
 env = LANG=ja_JP.UTF-8
-
-
