@@ -14,7 +14,6 @@
     },
     "icon_theme": "Catppuccin Macchiato",
     "text_rendering_mode": "platform_default",
-    "ui_font_family": ".ZedSans",
     "indent_guides": {
         "background_coloring": "disabled",
         "coloring": "fixed",
@@ -116,8 +115,12 @@
             ],
         },
     ],
-    "buffer_font_weight": 600.0,
-    "buffer_font_family": "Cascadia Next JP NF",
+    "buffer_font_family": "Sarasa Term J",
+    "buffer_font_size": 17,
+    "buffer_font_weight": 400.0,
+    "buffer_font_features": {
+        "calt": false, // Disable ligatures
+    },
     "ssh_connections": [
         {
             "host": "caesario",
@@ -131,9 +134,8 @@
         },
     ],
     "terminal": {
-        "font_weight": 500.0,
+        "font_weight": 450.0,
         "font_size": 16.0,
-        "font_family": "Cascadia Next JP NF",
         "line_height": {
             "custom": 1.4,
         },
@@ -153,7 +155,6 @@
     "wrap_guides": [80, 120, 160],
     "base_keymap": "VSCode",
     "ui_font_size": 17,
-    "buffer_font_size": 17,
     "theme": {
         "mode": "dark",
         "light": "Ayu Light",
