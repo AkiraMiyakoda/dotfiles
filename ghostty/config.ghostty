@@ -6,7 +6,7 @@ working-directory = home
 window-inherit-working-directory = false
 tab-inherit-working-directory = false
 
-font-family = "Sarasa Term J"
+font-family = "Cascadia Next JP NF"
 font-style = "Bold"
 font-style-bold = "ExtraBold"
 font-size = 12.6
