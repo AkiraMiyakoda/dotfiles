@@ -124,8 +124,8 @@ if [ -d ~/.local/bin ]; then
 fi
 
 # Activate Starship if installed
-if [ -x "$(command -v oh-my-posh)" ]; then
-    eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/easy-term-kai.omp.json)"
+if [ -x "$(command -v starship)" ]; then
+    eval "$(starship init bash)"
 fi
 
 # Activate Cargo if installed
