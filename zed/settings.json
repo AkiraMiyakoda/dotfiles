@@ -117,7 +117,7 @@
     ],
     "buffer_font_family": "Sarasa Term J",
     "buffer_font_size": 17,
-    "buffer_font_weight": 400.0,
+    "buffer_font_weight": 600.0,
     "buffer_font_features": {
         "calt": false, // Disable ligatures
     },
@@ -134,8 +134,8 @@
         },
     ],
     "terminal": {
-        "font_weight": 450.0,
-        "font_size": 16.0,
+        "font_weight": 600.0,
+        "font_size": 17.0,
         "line_height": {
             "custom": 1.4,
         },
