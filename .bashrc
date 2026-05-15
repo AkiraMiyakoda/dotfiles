@@ -123,13 +123,9 @@ if [ -d ~/.local/bin ]; then
     PATH=$PATH:~/.local/bin
 fi
 
-# Activate Powerline if installed
-function _update_ps1() {
-    PS1="$(~/.local/bin/powerline-shell $?)"
-}
-
-if [ -x "$(command -v powerline-shell)" ] && [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# Activate Starship if installed
+if [ -x "$(command -v oh-my-posh)" ]; then
+    eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/easy-term-kai.omp.json)"
 fi
 
 # Activate Cargo if installed
