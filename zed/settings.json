@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "ui_font_family": "UDEV Gothic",
+    "buffer_font_family": "UDEV Gothic",
+    "buffer_font_size": 16,
+    "buffer_font_weight": 400.0,
     "restore_on_startup": "last_workspace",
     "tab_size": 4,
     "prettier": {
@@ -115,12 +119,6 @@
             ],
         },
     ],
-    "buffer_font_family": "Cascadia Next JP NF",
-    "buffer_font_size": 17,
-    "buffer_font_weight": 400.0,
-    "buffer_font_features": {
-        "calt": false, // Disable ligatures
-    },
     "ssh_connections": [
         {
             "host": "caesario",
@@ -134,9 +132,9 @@
         },
     ],
     "terminal": {
-        "font_family": "Cascadia Next JP NF",
+        "font_family": "UDEV Gothic NF",
         "font_weight": 400.0,
-        "font_size": 17.0,
+        "font_size": 14.0,
         "line_height": {
             "custom": 1.4,
         },
