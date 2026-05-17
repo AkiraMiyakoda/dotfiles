@@ -1,21 +1,19 @@
 theme = "Nord"
-background-opacity = 0.98
+background-opacity = 0.95
 cursor-style = block
 
-working-directory = home
 window-inherit-working-directory = false
 tab-inherit-working-directory = false
 
-font-family = "Cascadia Next JP NF"
-font-style = "Bold"
-font-style-bold = "ExtraBold"
-font-size = 12.6
-font-feature = -dlig
+font-family = "UDEV Gothic"
+font-size = 11
 
 window-width = 160
-window-height = 46
-adjust-cell-height = 10%
+window-height = 50
+adjust-cell-height = 20%
+
+right-click-action = copy-or-paste
+clipboard-paste-protection = true
 
 term = xterm-256color
 env = LANG=ja_JP.UTF-8
-
