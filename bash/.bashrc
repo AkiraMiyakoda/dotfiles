@@ -123,14 +123,14 @@ if [ -d ~/.local/bin ]; then
     PATH=$PATH:~/.local/bin
 fi
 
+# Activate Cargo if installed
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
+
 # Activate Starship if installed
 if [ -x "$(command -v starship)" ]; then
     eval "$(starship init bash)"
-fi
-
-# Activate Cargo if installed
-if [ -d ~/.cargo/env ]; then
-    . ~/.cargo/env
 fi
 
 # Activate Go if installed
