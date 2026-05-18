@@ -8,8 +8,8 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     "ui_font_family": "UDEV Gothic",
-    "buffer_font_family": "UDEV Gothic",
-    "buffer_font_size": 16,
+    "buffer_font_family": "UDEV Gothic NF",
+    "buffer_font_size": 17,
     "buffer_font_weight": 400.0,
     "restore_on_startup": "last_workspace",
     "tab_size": 4,
@@ -134,7 +134,7 @@
     "terminal": {
         "font_family": "UDEV Gothic NF",
         "font_weight": 400.0,
-        "font_size": 14.0,
+        "font_size": 16,
         "line_height": {
             "custom": 1.4,
         },
