@@ -12,6 +12,7 @@ zstyle ':completion:*' save-history $SAVEHIST
 # Colors
 export TERM=xterm-256color
 autoload -U colors; colors
+eval "$(dircolors)"
 
 # Default editor
 export EDITOR=vim
