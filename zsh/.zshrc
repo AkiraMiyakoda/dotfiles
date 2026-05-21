@@ -8,6 +8,7 @@ setopt hist_ignore_dups
 setopt hist_verify
 zstyle ':completion:*' history-size $HISTSIZE
 zstyle ':completion:*' save-history $SAVEHIST
+bindkey '^R' history-incremental-search-backward
 
 # Colors
 export TERM=xterm-256color
