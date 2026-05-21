@@ -12,7 +12,6 @@ window-width = 160
 window-height = 50
 adjust-cell-height = 20%
 
-right-click-action = copy-or-paste
 clipboard-paste-protection = true
 
 term = xterm-256color
