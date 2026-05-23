@@ -1,3 +1,6 @@
+# Basic behaviors
+unsetopt auto_remove_slash
+
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
