@@ -44,7 +44,7 @@ alias ls='ls --color=auto'
 [ -d /usr/local/go/gin ] && PATH=$PATH:/usr/local/go/bin
 [ -d ~/go/gin ] && PATH=$PATH:~/go/bin
 
-# Activate Starship is available
+# Activate Starship if available
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
 # Define Docker target platform
