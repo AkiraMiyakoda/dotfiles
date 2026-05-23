@@ -40,7 +40,7 @@ alias ls='ls --color=auto'
 # Activate Cargo if available
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
-# Activate Go is available
+# Activate Go if available
 [ -d /usr/local/go/gin ] && PATH=$PATH:/usr/local/go/bin
 [ -d ~/go/gin ] && PATH=$PATH:~/go/bin
 
