@@ -84,53 +84,6 @@
     "git_panel": {
         "dock": "left",
     },
-    "wsl_connections": [
-        {
-            "distro_name": "Ubuntu-26.04",
-            "user": "akira",
-            "projects": [
-                {
-                    "paths": ["/home/akira/code/balbird-v26"],
-                },
-                {
-                    "paths": ["/home/akira/code/bitbank-orderbook"],
-                },
-                {
-                    "paths": ["/home/akira/code/dotfiles"],
-                },
-                {
-                    "paths": ["/home/akira/code/kodzuchi"],
-                },
-                {
-                    "paths": ["/home/akira/code/mahjongsoul-electron"],
-                },
-                {
-                    "paths": ["/home/akira/code/rust-utils"],
-                },
-                {
-                    "paths": ["/home/akira/code/tombi"],
-                },
-                {
-                    "paths": ["/home/akira/code/tombi-test"],
-                },
-                {
-                    "paths": ["/home/akira/code/toml-test"],
-                },
-            ],
-        },
-    ],
-    "ssh_connections": [
-        {
-            "host": "caesario",
-            "username": "akira",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/home/akira/code/wallclock"],
-                },
-            ],
-        },
-    ],
     "terminal": {
         "font_family": "UDEV Gothic NF",
         "font_weight": 400.0,
