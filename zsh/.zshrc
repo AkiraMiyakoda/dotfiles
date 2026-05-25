@@ -37,6 +37,9 @@ alias ls='ls --color=auto'
 # Add path to ~/.local/bin if exists
 [ -d ~/.local/bin ] && PATH=$PATH:~/.local/bin
 
+# Activate Rust coreutils if available
+[ -d /usr/lib/cargo/bin/coreutils/ ] && PATH=/usr/lib/cargo/bin/coreutils:$PATH
+
 # Activate Cargo if available
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
