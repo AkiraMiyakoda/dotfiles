@@ -6,11 +6,11 @@ window-inherit-working-directory = false
 tab-inherit-working-directory = false
 
 font-family = "UDEV Gothic"
-font-size = 11
+font-size = 12
 
 window-width = 160
 window-height = 50
-adjust-cell-height = 20%
+adjust-cell-height = 15%
 window-padding-x = 8
 window-padding-y = 4
 
