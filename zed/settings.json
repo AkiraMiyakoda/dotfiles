@@ -7,6 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "agent_servers": {
+        "claude-acp": {
+            "type": "registry",
+        },
+    },
+    "ssh_connections": [
+        {
+            "host": "caesario",
+            "username": "akira",
+            "args": [],
+            "projects": [
+                {
+                    "paths": ["/home/akira/Code/wallclock"],
+                },
+            ],
+        },
+    ],
     "ui_font_family": "UDEV Gothic",
     "buffer_font_family": "UDEV Gothic NF",
     "buffer_font_size": 17,
@@ -82,6 +99,8 @@
         "model_parameters": [],
     },
     "git_panel": {
+        "tree_view": false,
+        "sort_by_path": true,
         "dock": "left",
     },
     "terminal": {
@@ -109,8 +128,9 @@
     "ui_font_size": 17,
     "theme": {
         "mode": "dark",
-        "light": "Ayu Light",
+        "light": "Nord Light - No Italics",
         "dark": "Catppuccin Macchiato - No Italics",
     },
+    "extend_comment_on_newline": false,
     "disable_ai": true,
 }
