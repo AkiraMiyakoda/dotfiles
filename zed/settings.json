@@ -7,130 +7,134 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "agent_servers": {
-        "claude-acp": {
-            "type": "registry",
-        },
-    },
-    "ssh_connections": [
+  "agent_servers": {},
+  "ssh_connections": [
+    {
+      "host": "caesario",
+      "username": "akira",
+      "args": [],
+      "projects": [
         {
-            "host": "caesario",
-            "username": "akira",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/home/akira/Code/wallclock"],
-                },
-            ],
+          "paths": ["/home/akira/Code/wallclock"],
         },
-    ],
-    "ui_font_family": "UDEV Gothic",
-    "buffer_font_family": "UDEV Gothic NF",
-    "buffer_font_size": 17,
-    "buffer_font_weight": 400.0,
-    "restore_on_startup": "last_workspace",
-    "tab_size": 4,
-    "prettier": {
-        "allowed": true,
+      ],
     },
-    "icon_theme": "Catppuccin Macchiato",
-    "text_rendering_mode": "platform_default",
-    "indent_guides": {
-        "background_coloring": "disabled",
-        "coloring": "fixed",
-    },
-    "scrollbar": {
-        "show": "auto",
-        "selected_text": true,
-        "cursors": true,
-        "git_diff": true,
-    },
-    "cli_default_open_behavior": "existing_window",
-    "languages": {
-        "Rust": {
-            "semantic_tokens": "combined",
-            "formatter": {
-                "language_server": {
-                    "name": "rust-analyzer",
-                },
-            },
+  ],
+  "ui_font_family": "UDEV Gothic",
+  "buffer_font_family": "UDEV Gothic NF",
+  "buffer_font_size": 17,
+  "buffer_font_weight": 400.0,
+  "restore_on_startup": "last_workspace",
+  "tab_size": 4,
+  "prettier": {
+    "allowed": true,
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "text_rendering_mode": "platform_default",
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "fixed",
+  },
+  "scrollbar": {
+    "show": "auto",
+    "selected_text": true,
+    "cursors": true,
+    "git_diff": true,
+  },
+  "cli_default_open_behavior": "existing_window",
+  "languages": {
+    "Rust": {
+      "semantic_tokens": "combined",
+      "formatter": {
+        "language_server": {
+          "name": "rust-analyzer",
         },
-        "TOML": {
-            "formatter": { "language_server": { "name": "tombi" } },
+      },
+    },
+    "TOML": {
+      "formatter": { "language_server": { "name": "tombi" } },
+    },
+    "YAML": {
+      "tab_size": 2,
+    },
+    "Svelte": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+    },
+    "TypeScript": {
+      "formatter": ["prettier", { "code_action": "source.organizeImports" }],
+    },
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rustfmt": {
+          "extraArgs": ["+nightly"],
         },
-        "YAML": {
-            "tab_size": 2,
-        },
+      },
     },
-    "lsp": {
-        "rust-analyzer": {
-            "initialization_options": {
-                "rustfmt": {
-                    "extraArgs": ["+nightly"],
-                },
-            },
-        },
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+  },
+  "buffer_line_height": {
+    "custom": 1.45,
+  },
+  "project_panel": {
+    "bold_folder_labels": true,
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "git_status_indicator": true,
+    "diagnostic_badges": true,
+    "default_width": 240.0,
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "tree_view": false,
+    "sort_by_path": true,
+    "dock": "left",
+  },
+  "terminal": {
+    "font_family": "UDEV Gothic NF",
+    "font_weight": 400.0,
+    "font_size": 16,
+    "line_height": {
+      "custom": 1.4,
     },
-    "toolbar": {
-        "breadcrumbs": true,
-    },
-    "buffer_line_height": {
-        "custom": 1.45,
-    },
-    "project_panel": {
-        "bold_folder_labels": true,
-        "file_icons": true,
-        "folder_icons": true,
-        "git_status": true,
-        "git_status_indicator": true,
-        "diagnostic_badges": true,
-        "default_width": 240.0,
-        "dock": "left",
-    },
-    "outline_panel": {
-        "dock": "right",
-    },
-    "collaboration_panel": {
-        "dock": "left",
-    },
-    "agent": {
-        "dock": "right",
-        "favorite_models": [],
-        "model_parameters": [],
-    },
-    "git_panel": {
-        "tree_view": false,
-        "sort_by_path": true,
-        "dock": "left",
-    },
-    "terminal": {
-        "font_family": "UDEV Gothic NF",
-        "font_weight": 400.0,
-        "font_size": 16,
-        "line_height": {
-            "custom": 1.4,
-        },
-    },
-    "telemetry": {
-        "diagnostics": true,
-        "metrics": true,
-    },
-    "minimap": {
-        "max_width_columns": 140,
-        "show": "always",
-    },
-    "file_types": {},
-    "show_whitespaces": "all",
-    "show_edit_predictions": true,
-    "ensure_final_newline_on_save": true,
-    "wrap_guides": [80, 120, 160],
-    "base_keymap": "VSCode",
-    "ui_font_size": 17,
-    "theme": {
-        "mode": "dark",
-        "light": "Nord Light - No Italics",
-        "dark": "Catppuccin Macchiato - No Italics",
-    },
-    "extend_comment_on_newline": false,
-    "disable_ai": true,
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+  },
+  "minimap": {
+    "max_width_columns": 140,
+    "show": "always",
+  },
+  "file_types": {},
+  "show_whitespaces": "all",
+  "show_edit_predictions": true,
+  "ensure_final_newline_on_save": true,
+  "wrap_guides": [80, 120, 160],
+  "base_keymap": "VSCode",
+  "ui_font_size": 17,
+  "theme": {
+    "mode": "dark",
+    "light": "Nord Light - No Italics",
+    "dark": "Catppuccin Macchiato - No Italics",
+  },
+  "extend_comment_on_newline": false,
 }
