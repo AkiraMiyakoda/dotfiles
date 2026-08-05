@@ -37,15 +37,12 @@ alias ls='ls --color=auto'
 # Add path to ~/.local/bin if exists
 [ -d ~/.local/bin ] && PATH=$PATH:~/.local/bin
 
-# Activate Rust coreutils if available
-[ -d /usr/lib/cargo/bin/coreutils/ ] && PATH=/usr/lib/cargo/bin/coreutils:$PATH
-
 # Activate Cargo if available
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
 # Activate Go if available
-[ -d /usr/local/go/gin ] && PATH=$PATH:/usr/local/go/bin
-[ -d ~/go/gin ] && PATH=$PATH:~/go/bin
+[ -d /usr/local/go/bin ] && PATH=$PATH:/usr/local/go/bin
+[ -d ~/go/bin ] && PATH=$PATH:~/go/bin
 
 # Activate Starship if available
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
