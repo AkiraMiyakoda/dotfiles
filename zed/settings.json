@@ -7,19 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent_servers": {},
-  "ssh_connections": [
-    {
-      "host": "caesario",
-      "username": "akira",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/home/akira/Code/wallclock"],
-        },
-      ],
-    },
-  ],
   "ui_font_family": "UDEV Gothic",
   "buffer_font_family": "UDEV Gothic NF",
   "buffer_font_size": 17,
@@ -66,6 +53,18 @@
     "TypeScript": {
       "formatter": ["prettier", { "code_action": "source.organizeImports" }],
     },
+    "Python": {
+      "language_servers": [
+        "ty",
+        "ruff"
+      ],
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    }
   },
   "lsp": {
     "rust-analyzer": {
@@ -85,7 +84,6 @@
   "project_panel": {
     "bold_folder_labels": true,
     "file_icons": true,
-    "folder_icons": true,
     "git_status": true,
     "git_status_indicator": true,
     "diagnostic_badges": true,
@@ -105,7 +103,6 @@
   },
   "git_panel": {
     "tree_view": false,
-    "sort_by_path": true,
     "dock": "left",
   },
   "terminal": {
@@ -133,7 +130,7 @@
   "ui_font_size": 17,
   "theme": {
     "mode": "dark",
-    "light": "Nord Light - No Italics",
+    "light": "Ayu Light",
     "dark": "Catppuccin Macchiato - No Italics",
   },
   "extend_comment_on_newline": false,
