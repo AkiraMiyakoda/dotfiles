@@ -40,10 +40,6 @@ alias ls='ls --color=auto'
 # Activate Cargo if available
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
-# Activate Go if available
-[ -d /usr/local/go/bin ] && PATH=$PATH:/usr/local/go/bin
-[ -d ~/go/bin ] && PATH=$PATH:~/go/bin
-
 # Activate Starship if available
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
